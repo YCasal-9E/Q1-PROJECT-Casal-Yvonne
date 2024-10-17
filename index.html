@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ICT Project</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+
+	<style>
+		* {
+		margin: 0;
+		padding: 0;
+        box-sizing: border-box;
+        } 
+		body{
+			background-image: url(https://i.postimg.cc/mrcGWqsy/Add-a-heading.jpg);
+			background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-attachment: fixed;
+
+		}
+		.header{
+			background-color: black;
+			margin: 0;
+			padding:15px;
+			width: 100%;
+			min-height: 175px;
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			color:#c4c29d;
+			font-family: raleway;
+			display:flex;
+			align-items:center;
+			justify-content: space-between;
+		}
+		.navigation ul {
+		    list-style-type: none; 
+		    display: flex;
+		    justify-content: space-between;
+		    font-size: 20px;
+		    width: 100%;
+		}
+		.logo{
+			width:150px;
+			height:auto;
+		}
+		.cart{
+			margin-left:25%;
+			margin-top:20px;
+		}
+		.signup{
+			margin-left: 10%;
+			margin-top: 20px;
+		}
+		a:link, a:visited{
+			color:#c4c29d;
+			text-decoration: none;
+		}
+		a:hover{
+			color:#c4c29d;
+			text-decoration: underline;
+			transition: 0.3s;
+		}
+		a:active{
+			color:#4a4827;
+		}
+		input[type="text"]{
+			font-family: raleway;
+			color: #4a4827;
+			padding: 6px;
+		    font-size: 15px;
+		    border-radius: 5px;
+		    border: 1px solid gold;
+		    width: 750px;
+		    height: 40px;
+		    margin: 0 20%;
+		    margin-top:15px;
+		}
+		h1{
+			font-family: raleway dots;
+			color:#c0a852;
+			margin-top:30px;
+			text-align: center;
+		}
+		.model{
+			width: auto;
+			height:350px;
+			display: block;
+			margin:0 20px;
+			margin-top:18px;
+		}
+		.model2{
+			width:auto;
+			height:350px;
+			display:block;
+			margin-top:20px;
+		}
+		.blair-and-serena{
+			display: flex;
+			justify-content: center; 
+		}
+		.slogan{
+			text-align: center;
+            margin-top: 18px; 
+            font-family:Raleway;
+            color: #c0a852;
+		}
+		.products {
+			background-color: black;
+			border: 2px solid #540612;
+			border-radius: 30px;
+			margin: 200px;
+			padding:30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            margin-top: 30px; 
+            margin-bottom:0;
+        }
+        .item {
+            background-color: white;
+            border: 2px solid gold; 
+            border-radius: 5px;
+            text-align: center;
+            margin: 10px; 
+            padding: 20px; 
+            width: 25%; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s; 
+        }
+        .item:hover {
+            transform: scale(1.05) !important;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+        h2{
+        	color: #540612;
+        	font-family: Afacud Flux;
+        }
+        .products p{
+        	color:#382e30;
+        	font-family: raleway;
+        }
+        .sign-up{
+        	background-color: black;
+			border: 2px solid #540612;
+			border-radius: 30px;
+			margin: 200px;
+			top: 0;
+			padding:30px;
+			justify-content: center;
+        }
+        .sign-up h2{
+        	color:#c4c29d;
+			font-family: raleway dots;
+			text-align: center;
+        }
+        .sign-up span{
+        	color:#c4c29d;
+        	font-family: Afacud Flux;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #540612;
+        }
+        .sign-up input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            margin-left:0;
+            font-family: raleway;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #540612;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #8b1d26;
+        }
+        .footer{
+        	background-color: black;
+        	color:#c4c29d;
+        	text-align: center;
+        	font-family: raleway;
+        	position: relative;
+        	bottom: 0;
+        	padding: 15px;
+        	margin:0;
+        }
+
+
+
+	</style>
+
+
+</head>
+<body>
+	<div class="header">
+		<nav class="navigation">
+			<ul>
+				<li>
+					<a href=#products>
+						<img src="https://i.pinimg.com/564x/47/f6/ff/47f6ff85772ef125c663e746397eec46.jpg" class="logo">
+					</a>
+				</li>
+
+				<li>
+                    <center><input type="text" class="search-bar" placeholder="Search..."></center>
+                </li>
+
+                <li class="cart"><a href="#cart" onclick="myFunction()">Cart</a></li>
+                <li class="signup"><a href="#signup">Signup</a></li>
+            </ul>
+        </nav>
+	</div>
+	
+	<h1>Your Style, Our Secret</h1>
+
+	<div class="blair-and-serena">
+
+	<img src="https://i.pinimg.com/564x/e4/51/32/e45132da1d1066b9774c8c75f9009cd6.jpg" class="model2">
+	<img src="https://i.pinimg.com/736x/51/81/c7/5181c7f0a0e75a165bc627407e78e95f.jpg" class="model">
+	<img src="https://i.pinimg.com/564x/70/4b/c5/704bc5aa50e4f226390f363e5dbcdd1e.jpg" class="model2">
+
+	</div>	
+
+	<div class="slogan">
+        Hey, Upper East Siders, Gossip Girl here.<br>
+        Look fabulous and feel fabulous with fashion that makes headlines,
+        where style meets scandal.
+    </div>
+
+    <div class="products" id="products">
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/j2rYV0yn/1.jpg" alt="Item 1" style="width: 100%; height: auto;">
+            <h2>Chanel Timeless Medium Caviar Red</h2>
+            <p>Price: $10,200.00</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/rsCXMn9n/2.jpg" alt="Item 2" style="width: 100%; height: auto;">
+            <h2>Dior Signature B8U Sunglasses</h2>
+            <p>Price: $701.50</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/WbTcXV2Q/3.jpg" alt="Item 3" style="width: 100%; height: auto;">
+            <h2>Christian Louboutin So Kate</h2>
+            <p>Price: $795.00</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/Fzv8WbQj/4.jpg" alt="Item 4" style="width: 100%; height: auto;">
+            <h2>Hermes Heure H</h2>
+            <p>Price: $3,775.10</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/NG8Wyn1b/5.jpg" alt="Item 5" style="width: 100%; height: auto;">
+            <h2>Chloe The 99 Shoulder Bag</h2>
+            <p>Price: $1,645.99</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/x1Z7DV2j/6.jpg" alt="Item 6" style="width: 100%; height: auto;">
+            <h2>Chanel Velvet Headband</h2>
+            <p>Price: $369.50</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/Kvsr48b6/7.jpg" alt="Item 7" style="width: 100%; height: auto;">
+            <h2>YSL Opyum Heels</h2>
+            <p>Price: $1,740.50</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/htkLbZfM/8.jpg" alt="Item 8" style="width: 100%; height: auto;">
+            <h2>Dior Saddle Bag</h2>
+            <p>Price: $5,550.99</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/JnmjSy3k/9.jpg" alt="Item 9" style="width: 100%; height: auto;">
+            <h2>Celine Triomphe Belt</h2>
+            <p>Price: $790.00</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/d0TKg3Qw/10.jpg" alt="Item 10" style="width: 100%; height: auto;">
+            <h2>Hermes Birkin 35 Rouge H</h2>
+            <p>Price: $15,999.00</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/50BWNrFr/11.jpg" alt="Item 11" style="width: 100%; height: auto;">
+            <h2>Dior 30MONTAIGNE S9U</h2>
+            <p>Price: $560.99</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/Znjk6yHF/12.jpg" alt="Item 12" style="width: 100%; height: auto;">
+            <h2>Gucci Jackie Shoulder Bag</h2>
+            <p>Price: $3,800.00</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/K8syjLpn/13.jpg" style="width: 100%; height: auto;">
+            <h2>Chanel Beret</h2>
+            <p>Price: $1,300.99</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/B62WmzSg/14.jpg" alt="Item 14" style="width: 100%; height: auto;">
+            <h2>Louis Vuitton Mini Moon Monogram</h2>
+            <p>Price: $10,999.00</p>
+        </div>
+        <div class="item" data-aos="fade-down">
+            <img src="https://i.postimg.cc/8cb2Srrf/15.jpg" alt="Item 15" style="width: 100%; height: auto;">
+            <h2>Prada Monolith Loafers</h2>
+            <p>Price: $979.00</p>
+        </div>
+    </div>
+
+    <div class="sign-up" id="signup">
+    <h2>Ready to spill the tea?</h2>
+    <form>
+        <div>
+            <label for="username"><span>Username:</span></label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="email"><span>Email:</span></label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password"><span>Password:</span></label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+    </div>
+
+    <div class="footer">
+    	<p>
+    		XOXO, Gossip Girl  <br/><br/>
+    		Yvonne Casal | 9-Emerald
+    	</p>
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  		AOS.init();
+	</script>
+
+	<script>
+		function myFunction() {
+  		alert("Looks like someone is shopping.. Sign up first! XOXO");
+	}
+	</script>
+
+</body>
+</html>
